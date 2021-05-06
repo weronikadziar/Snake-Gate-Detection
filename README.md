@@ -1,6 +1,6 @@
 # Snake-Gate-Detection
 Color and Edge Based Snake Gate Detection for Autonomous Drone Racing.
-Algorithm written by Weronika Dziarnowska for the course "Autonomous Flight of Micro Air Vehicles" at Delft University of Technology.
+Algorithm written by Weronika Dziarnowska (student id: 4551117) for the course "Autonomous Flight of Micro Air Vehicles" at Delft University of Technology.
 
 The snake gate detection is based on:
 S. Li, M.M.O.I. Ozo, C. De Wagter, and G.C.H.E.de Croon. Autonomous drone race: A computationally efficient vision-based navigation and control strategy. Robotics and Autonomous Systems, 133, 2020.
