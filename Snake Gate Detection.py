@@ -238,61 +238,39 @@ def process_and_show_image(image):
     [corners,found] = snake_gate_detection(im_hsv,im_edges,20,90)
     
     
-    # Plot
-    fig, axs = plt.subplots(1, 3, figsize=(35, 10))
-    axs[0].imshow(im_color, aspect="auto")
-    axs[1].imshow(im_edges, aspect="auto")
-    axs[2].imshow(cv2.cvtColor(im_hsv, cv2.COLOR_HSV2RGB), aspect="auto")
-    if found == 1:
-        # Plot detection results, otherwise no points are plotted.
-        axs[2].scatter(corners[0][1],corners[0][0],s=500,c='red')
-        axs[2].scatter(corners[1][1],corners[1][0],s=500,c='red')
-        axs[2].scatter(corners[2][1],corners[2][0],s=500,c='red')
-        axs[2].scatter(corners[3][1],corners[3][0],s=500,c='red')
-    # To save the figures in a folder, uncomment the two lines below.
-    number = image[11:-1]
-    fig.savefig("Plots_ColorTune/snake_"+number+"g")
+    # # Uncomment the lines below to Plot
+    # fig, axs = plt.subplots(1, 3, figsize=(35, 10))
+    # axs[0].imshow(im_color, aspect="auto")
+    # axs[1].imshow(im_edges, aspect="auto")
+    # axs[2].imshow(cv2.cvtColor(im_hsv, cv2.COLOR_HSV2RGB), aspect="auto")
+    # if found == 1:
+    #     # Plot detection results, otherwise no points are plotted.
+    #     axs[2].scatter(corners[0][1],corners[0][0],s=500,c='red')
+    #     axs[2].scatter(corners[1][1],corners[1][0],s=500,c='red')
+    #     axs[2].scatter(corners[2][1],corners[2][0],s=500,c='red')
+    #     axs[2].scatter(corners[3][1],corners[3][0],s=500,c='red')
     
-    plt.show()
+    # # To save the figures in a folder, uncomment the two lines below.
+    # # number = image[11:-1]
+    # # fig.savefig("Plots_ColorTune/snake_"+number+"g")
+    
+    # plt.show()
+    
+    # return corners
 
 
 #------------------ Enter your image name and path here ------------------#
 #-- Uncomment and use the commands for multiple or only one image below --#
 
 # Detect gates in all images from the folder.
-for image in glob.glob("Images/*.png"): 
-    process_and_show_image(image)
+# for image in glob.glob("Images/*.png"): 
+#     process_and_show_image(image)
     
 # Or run the code just for one image.
-# image = "Images/img_6.png"
+# image = "Images/img_42.png"
 # process_and_show_image(image)
     
 
-# image1 = "Images/img_6.png"
-# image2 = "Images/img_48.png"
-# image3 = "Images/img_64.png"
-# image4 = "Images/img_130.png"
-# image5 = "Images/img_151.png"
-# image6 = "Images/img_196.png"
-# image7 = "Images/img_273.png"
-# image8 = "Images/img_370.png"
-# image9 = "Images/img_387.png"
-# image10 = "Images/img_415.png"
-# image11 = "Images/img_438.png"
-# image12 = "Images/img_412.png"
 
-
-# process_and_show_image(image1)
-# process_and_show_image(image2)
-# process_and_show_image(image3)
-# process_and_show_image(image4)
-# process_and_show_image(image5)
-# process_and_show_image(image6)
-# process_and_show_image(image7)
-# process_and_show_image(image8)
-# process_and_show_image(image9)
-# process_and_show_image(image10)
-# process_and_show_image(image11)
-# process_and_show_image(image12)
 
     
